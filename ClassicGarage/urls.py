@@ -18,12 +18,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
-from register import views as v
-
-
+from register import views as vr
+from home import views as vh
+from login import views as vl
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', v.register, name="register")
+    path('register/', vr.register, name="register"),
+    path('home/', vh.home, name="home"),
+    path('login/', vl.login, name="login"),
+
 
 
 ]
