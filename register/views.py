@@ -10,7 +10,7 @@ def register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect("/home")
+        return redirect("home")
     else:
         form = CreateUserForm()
     return render(request,
