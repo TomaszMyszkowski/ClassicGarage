@@ -25,3 +25,8 @@ def loginPage(request):
 
     context = {}
     return render(request, 'login/login.html', context)
+
+
+def LogoutUser(request):
+    logout(request)
+    return redirect('home')

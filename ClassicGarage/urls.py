@@ -24,8 +24,9 @@ from login import views as vl
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', vr.register, name="register"),
-    path('home/', vh.home, name="home"),
+    path('', vh.home, name="home"),
     path('login/', vl.loginPage, name="login"),
+    path('logout/', vl.LogoutUser, name="logout"),
 
 
 
