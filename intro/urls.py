@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ClassicGarage.models import car, car_adveritsment, part_of_car_advertisment, service_avertisment
+
+admin.site.register(car)
+admin.site.register(car_adveritsment)
+admin.site.register(part_of_car_advertisment)
+admin.site.register(service_avertisment)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
