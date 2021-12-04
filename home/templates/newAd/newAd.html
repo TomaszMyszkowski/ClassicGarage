@@ -59,7 +59,7 @@
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
 
-            <strong>DODAJ NOWE OGŁOSZENIE</strong><br><br>
+            <strong>DODAJ NOWE OGŁOSZENIE - SAMOCHÓD/CZĘŚCI</strong><br><br>
           </a>
 
                 <div class="navbar navbar-dark bg-dark box-shadow">
@@ -70,102 +70,129 @@
       </div>
           <!-- START THE ad -->
 
-        <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">WYBIERZ KATEGORIE OGŁOSZENIA</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            SAMOCHODY
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            CZĘŚCI
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            USŁUGI
-          </label>
-        </div>
 
-        <div class="btn-group">
-  <button type="button" class="btn btn-primary">MARKA</button>
-  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Wybierz</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Pierwszy link</a>
-    <a class="dropdown-item" href="#">Drugi link</a>
-    <a class="dropdown-item" href="#">Trzeci link</a>
-  <div class="dropdown-divider"></div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Dodaj szczegóły ogłoszenia - SAMOCHÓD</h4>
+          <form class="needs-validation" novalidate>
+
+                    <div class="mb-3">
+              <label for="email">TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
+              <input type="email" class="Adtitle" id="Adtitle" name="Adtitle" placeholder="Podaj tytuł ogłoszenia (max 50 znaków)">
+              <div class="invalid-feedback">
+                Podaj tytuł
+              </div>
+            </div>
+<form>
+
+        <div class="mb-3">
+              <label for="model">MODEL<span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="model" name="model" placeholder="Wprowadź model samochodu">
+              <div class="invalid-feedback">
+                podaj model
+              </div>
+                   <div class="mb-3">
+              <label for="brand">MARKA<span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="brand" name="brand" placeholder="Wprowadź markę samochodu">
+              <div class="invalid-feedback">
+                podaj markę
+              </div>
+
+                    <div class="mb-3">
+        <div class="mb-3">
+              <label for="price">CENA (PLN)<span class="text-muted"></span></label>
+              <input type="integer" class="form-control" id="price" name="price" placeholder="Wprowadź cene w formacie 000.00">
+              <div class="invalid-feedback">
+                Podaj cene
+              </div>
+            </div>
+            <div class="mb-3">
+        <div class="mb-3">
+              <label for="year">ROCZNIK<span class="text-muted"></span></label>
+              <input type="integer" class="form-control" id="year" name="year" placeholder="Wprowadź rok produkcji w formacie RRRR">
+              <div class="invalid-feedback">
+                Podaj rok
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="location">WOJEWÓDZTWO</label>
+                <select class="location" name="location" id="location" required>
+                  <option value="">Wybierz...</option>
+                  <option> kujawsko_pomorskie </option>
+                    <option> dolnośląskie </option>
+                    <option> lubelskie </option>
+                    <option> lubuskie </option>
+                    <option> łódzkie </option>
+                    <option> małopolskie </option>
+                    <option> mazowieckie </option>
+                    <option> opolskie </option>
+                    <option> podkarpackie </option>
+                    <option> podlaskie </option>
+                    <option> pomorskie </option>
+                    <option> sląskie </option>
+                    <option>świetokrzyskie</option>
+  <option>wielkopolskie</option>
+<option>zachodniopomorskie</option>
+                </select>
+                <div class="invalid-feedback">
+                  Wybierz województwo...
+                </div>
+              </div>
+<div class="mb-3">
+              <label for="year">START OGŁOSZENIA: <span class="text-muted"></span></label>
+                             <form action="index.php" method="post" >
+	<input type="date" name="add_date" >
+</form>
+              </div>
+            </div>
+<div class="mb-3">
+              <label for="year">OGŁOSZENIE WAŻNE DO:<span class="text-muted"></span></label>
+                             <form action="index.php" method="post" >
+	<input type="date" name="end_date" >
+</form>
+              </div>
+            </div>
+
+
+<div class="form-group">
+    <label for="SentPhoto">WGRAJ ZDJĘCIA</label>
+    <input type="file" class="form-control-file" id="przykladoweWysylaniePliku">
   </div>
-</div>
+    <div class="form-group row">
+   <label for="email">Dodaj krótki opis <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" placeholder="Wpisz dodatkowe informacje dotyczące samochodu/części">
+              <div class="invalid-feedback">
+                Wpisz dodatkowe informacje dotyczące samochodu/części
+              </div>
+            </div>
 
-<div class="btn-group">
-  <button type="button" class="btn btn-success">MODEL</button>
-  <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Wybierz</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Pierwszy link</a>
-    <a class="dropdown-item" href="#">Drugi link</a>
-    <a class="dropdown-item" href="#">Trzeci link</a>
+            <h4 class="mb-3">Dane Kontaktowe</h4>
 
-  </div>
-</div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Numer telefonu +48</label>
+                <input class="form-control" id="telephone" name="telephone" placeholder="" required type="integer">
+                <div class="invalid-feedback">
+                  wymagane
+                </div>
+              </div>
 
-<div class="btn-group">
-  <button type="button" class="btn btn-info">ROCZNIK</button>
-  <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Wybierz</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Pierwszy link</a>
-    <a class="dropdown-item" href="#">Drugi link</a>
-    <a class="dropdown-item" href="#">Trzeci link</a>
-    <div class="dropdown-divider"></div>
+            </div>
 
-  </div>
-</div>
+  <form>
 
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">DODAJ SWOJE OGŁOSZENIE!</button>
+          </form>
+        </div>
+      </div>
 
       </div>
     </div>
   </fieldset>
-<form>
-  <div class="form-group row"><br>
-    <label for="przykladowyEmail" class="col-sm-2 col-form-label" width="300">TYTUŁ</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="przykladowyEmail" placeholder="Wprowadź tytuł ogłoszennia">
-    </div>
-  </div>
-    <div class="form-group row"><br>
-    <label for="Title" class="col-sm-2 col-form-label" width="300">CENA</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="przykladowyEmail" placeholder="Wprowadź kwotę">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="Price" class="col-sm-2 col-form-label">Cena</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="przykladoweHaslo" placeholder="Hasło">
-    </div>
-  </div>
 
-  <div class="form-group row">
 
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Wyślij</button>
-    </div>
-  </div>
-</form>
 
           <!-- /END THE ad -->
 
