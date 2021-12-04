@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 status = [
@@ -35,7 +36,7 @@ class car_adveritsment(models.Model):
 
     # id = models.IntegerField(primary_key=True)
     id_car = models.ForeignKey('car', on_delete=models.CASCADE)
-    id_user = models.IntegerField()
+    id_user = models.ForeignKey(User, on_delete=models.CASCADE)
     brand = models.CharField(max_length=15)
     model = models.CharField(max_length=15)
     year = models.IntegerField() #metoda field.unique_for_year
