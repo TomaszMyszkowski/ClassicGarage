@@ -67,7 +67,7 @@ class Migration(migrations.Migration):
                 ('location', models.CharField(choices=[('ds', 'dolnośląskie'), ('kp', 'kujawsko_pomorskie'), ('lbl', 'lubelskie'), ('lub', 'lubuskie'), ('łód', 'łódzkie'), ('mlp', 'małopolskie'), ('maz', 'mazowieckie'), ('o', 'opolskie'), ('pkrp', 'podkarpackie'), ('pdls', 'podlaskie'), ('pom', 'pomorskie'), ('sl', 'slaśkie'), ('sw', 'świetokrzyskie'), ('wm', 'warmińsko_mazurskie'), ('wlkp', 'wielkopolskie'), ('zp', 'zachodniopomorskie')], max_length=4)),
                 ('telephone', models.IntegerField()),
                 ('description', models.TextField(max_length=1000)),
-                ('id_car', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='CarAdvertisment.car')),
+                ('id_car', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Advertisment.car')),
             ],
         ),
     ]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form action="{% url 'car-add' %} " method="POST">
+        {% csrf_token %}
+
+     <ul>
+        <li><input type="text" name="brand" placeholder="brand"></li>
+        <li><input type="text" name="model" placeholder="model"></li>
+        <li><input type="text" name="year" placeholder="year"></li>
+        <li><input type="text" name="add_date" placeholder="add_date"></li>
+        <li><input type="text" name="modified_date" placeholder="modiefied_date"></li>
+        <li><input type="text" name="end_date" placeholder="end_date"></li>
+        <li><input type="text" name="prize" placeholder="prize"></li>
+        <li><input type="text" name="status" placeholder="status"></li>
+        <li><input type="text" name="location" placeholder="location"></li>
+        <li><input type="text" name="telephone" placeholder="telephone"></li>
+         <li><input type="textarea"  name="description" placeholder="description"></li>
+        <input type="submit" value="Zarejestruj">
+         </ul>
+    </form>
+</body>
+</html>

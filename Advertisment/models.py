@@ -35,10 +35,28 @@ class car(models.Model):
 
 
 class car_adveritsment(models.Model):
+    change_location = [
+        ('ds', 'dolnośląskie'),
+        ('kp', 'kujawsko_pomorskie'),
+        ('lbl', 'lubelskie'),
+        ('lub', 'lubuskie'),
+        ('łód', 'łódzkie'),
+        ('mlp', 'małopolskie'),
+        ('maz', 'mazowieckie'),
+        ('o', 'opolskie'),
+        ('pkrp', 'podkarpackie'),
+        ('pdls', 'podlaskie'),
+        ('pom', 'pomorskie'),
+        ('sl', 'slaśkie'),
+        ('sw', 'świetokrzyskie'),
+        ('wm', 'warmińsko_mazurskie'),
+        ('wlkp', 'wielkopolskie'),
+        ('zp', 'zachodniopomorskie')
+    ]
 
     # id = models.IntegerField(primary_key=True)
-    id_car = models.ForeignKey('car', on_delete=models.CASCADE)
-    id_user = models.IntegerField()
+    # id_car = models.ForeignKey('car', on_delete=models.CASCADE)
+    # id_user = models.IntegerField()
     brand = models.CharField(max_length=15)
     model = models.CharField(max_length=15)
     year = models.IntegerField() #metoda field.unique_for_year

@@ -14,15 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from CarAdvertisment.models import car, car_adveritsment, part_of_car_advertisment, service_avertisment
+from Advertisment.models import car, car_adveritsment, part_of_car_advertisment, service_avertisment
 from django.contrib import admin
 from django.urls import path
 
 from register import views as vr
 from home import views as vh
 from login import views as vl
-from CarAdvertisment import views as vCA
-
+from Advertisment import views as vA
+from announcement import views as aV
 admin.site.register(car)
 admin.site.register(car_adveritsment)
 admin.site.register(part_of_car_advertisment)
@@ -36,8 +36,8 @@ urlpatterns = [
     path('', vh.home, name="home"),
     path('login/', vl.loginPage, name="login"),
     path('logout/', vl.LogoutUser, name="logout"),
-    path('car/', vCA.show_car, name="car"),
-    path('car-add/', vCA.car_add, name="car-add")
+    path('announcement/', aV.annoucment, name="announcement"),
+    path('car-add/', vA.car_advert1, name="car-add"),
 
 
 

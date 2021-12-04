@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'register',
     'home',
     'login',
-    'CarAdvertisment'
+    'Advertisment',
+    'announcement',
 
 ]
 
