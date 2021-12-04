@@ -27,8 +27,8 @@ change_location = [
 # Create your models here.
 
 class car(models.Model):
-    brand = models.CharField(max_length=15)
-    model = models.CharField(max_length=15)
+    brand = models.CharField(max_length=30)
+    model = models.CharField(max_length=30)
 
     def __str__(self):
         return f'{self.brand} {self.model}'

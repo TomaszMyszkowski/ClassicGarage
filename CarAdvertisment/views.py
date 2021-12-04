@@ -12,16 +12,13 @@ def show_car(request):
 
 def car_add(request):
     if request.method == "POST":
-        brand = request.POST.get('brand')
-        if brand:
-            car.objects.create(brand=brand)
-
-
-
-
-
-    return render(
-        request,
-        'car.html',
+        if request.POST.get('brand') and request.POST.get('model'):
+            auto = car()
+            auto.brand = request.POST.get('brand')
+            auto.model = request.POST.get('model')
+            auto.save()
+            return render(
+            request,
+            'car.html',
     )
 
