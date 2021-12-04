@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from CarAdvertisment.models import car, car_adveritsment, part_of_car_advertisment, service_avertisment
+from CarAdvertisment.models import car, car_adveritsment, part_of_car_advertisment, service_advertisment
 from django.contrib import admin
 from django.urls import path
 
@@ -26,7 +26,7 @@ from CarAdvertisment import views as vCA
 admin.site.register(car)
 admin.site.register(car_adveritsment)
 admin.site.register(part_of_car_advertisment)
-admin.site.register(service_avertisment)
+admin.site.register(service_advertisment)
 
 
 
