@@ -28,14 +28,15 @@ admin.site.register(car_adveritsment)
 admin.site.register(part_of_car_advertisment)
 admin.site.register(service_avertisment)
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', vr.register, name="register"),
     path('', vh.home, name="home"),
     path('login/', vl.loginPage, name="login"),
     path('logout/', vl.LogoutUser, name="logout"),
-    path('car',vCA.show_car, name="showcar"),
-    path('carad/', vCA.car_add, name="caradd")
+    path('car/' ,vCA.show_car, name="sshowca"),
 
 
 
