@@ -1,4 +1,4 @@
-"""intro URL Configuration
+"""ClassicGarage URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -14,19 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from Advertisment.models import car, car_adveritsment, part_of_car_advertisment, service_avertisment
+from CarAdvertisment.models import car, car_adveritsment, part_of_car_advertisment, service_advertisment
 from django.contrib import admin
 from django.urls import path
 
 from register import views as vr
 from home import views as vh
 from login import views as vl
-from Advertisment import views as vA
-from announcement import views as aV
+from CarAdvertisment import views as vCA
+
 admin.site.register(car)
 admin.site.register(car_adveritsment)
 admin.site.register(part_of_car_advertisment)
-admin.site.register(service_avertisment)
+admin.site.register(service_advertisment)
 
 
 
@@ -36,8 +36,7 @@ urlpatterns = [
     path('', vh.home, name="home"),
     path('login/', vl.loginPage, name="login"),
     path('logout/', vl.LogoutUser, name="logout"),
-    path('announcement/', aV.annoucment, name="announcement"),
-    path('car-add/', vA.car_advert1, name="car-add"),
+    path('car',vCA.show_car, name="sshowca"),
 
 
 
