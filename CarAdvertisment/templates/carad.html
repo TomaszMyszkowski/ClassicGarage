@@ -5,13 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-
-   <form action="carad" method="POST">
+  <form action="carad" method="POST">
         {% csrf_token %}
         <input type="text" name="brand" placeholder="brand">
         <input type="text" name="model" placeholder="model">
         <input type="submit" value="Zarejestruj">
     </form>
-
 </body>
 </html>

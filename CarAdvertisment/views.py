@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import car
 # Create your views here.
 
@@ -7,7 +7,7 @@ def show_car(request):
     auto = car.objects.all()
     return render (request,
                    'car.html',
-                   {'auto':auto})
+                   {'auto': auto})
 
 
 def car_add(request):
@@ -17,8 +17,4 @@ def car_add(request):
             auto.brand = request.POST.get('brand')
             auto.model = request.POST.get('model')
             auto.save()
-            return render(
-            request,
-            'car.html',
-    )
-
+        return redirect('showcar')
