@@ -17,4 +17,5 @@ def car_add(request):
             auto.brand = request.POST.get('brand')
             auto.model = request.POST.get('model')
             auto.save()
-        return redirect('showcar')
+        return redirect('car')
+

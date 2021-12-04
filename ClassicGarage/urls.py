@@ -36,7 +36,8 @@ urlpatterns = [
     path('', vh.home, name="home"),
     path('login/', vl.loginPage, name="login"),
     path('logout/', vl.LogoutUser, name="logout"),
-    path('car/' ,vCA.show_car, name="sshowca"),
+    path('car/', vCA.show_car, name="car"),
+    path('car-add/', vCA.car_add, name="car-add")
 
 
 
