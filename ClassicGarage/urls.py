@@ -28,6 +28,8 @@ admin.site.register(car_adveritsment)
 admin.site.register(part_of_car_advertisment)
 admin.site.register(service_avertisment)
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', vr.register, name="register"),
