@@ -28,23 +28,24 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
 
-      <li class="nav-item active">
-        <a class="nav-link" href="#">SPRZEDAJ!</a>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}"><strong>CLASSIC GARAGE</strong></a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">KUP!</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CZĘŚCI DO SAMOCHODÓW</a>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">USŁUGI</a>
+        <a class="nav-link" href="{% url 'car_adveritsment' %}">Sprzedaj samochód</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'part_of_car_advertisment' %}">Sprzedaj części do samochodów</a>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'service_avertisment' %}">Zoferuj Usługi</a>
       </li>
       </li>
     </ul>
   </div>
-  <span> <a class="hello-msg"href="{% url 'register' %}">Stwórz konto</a> </span>
+  <span> <a class="hello-msg"href="{% url 'login' %}">Stwórz konto</a> </span>
   <span><a class="hello-msg" href="{% url 'login' %}">Zaloguj</a> </span>
   <span class="hello-msg">Cześć, {{request.user}}</span>
   <span ><a  class="hello-msg" href="{% url 'logout' %}">Wyloguj</a></span>
@@ -68,10 +69,11 @@
               <div class="container" >
 
                 <div class="carousel-caption text-start" >
+                  <img src="https://images.unsplash.com/photo-1508171997656-fdf7cf6c4df9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmludGFnZSUyMGNhcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
 
                   <h1>Przejrzyj ogłoszenia</h1>
-                  <p>Sprzedaj lub zakup zabytkowy samochód!</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Odkryj!</a></p>
+                  <p>Zakup zabytkowy samochód!</p>
+                  <p><a class="btn btn-lg btn-primary" href="{% url 'allads' %}">Odkryj!</a></p>
                 </div>
               </div>
             </div>
@@ -80,20 +82,22 @@
 
               <div class="container">
                 <div class="carousel-caption">
+                  <img src="https://images.unsplash.com/photo-1544896478-d5b709d413c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
                   <h1>Poszukujesz części?</h1>
                   <p>Przejrzyj ogłoszenia i sprawdź - może znajdziesz brakujący element!</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Sprawdź teraz!</a></p>
+                  <p><a class="btn btn-lg btn-primary" href="{% url 'allads' %}">Sprawdź teraz!</a></p>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
-              <svg class="bd-placeholder-img" width="100%" height="500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+              <svg class="bd-placeholder-img" width="100%" height="500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#0000000"/></svg>
 
               <div class="container">
                 <div class="carousel-caption text-end">
+                  <img src="https://images.unsplash.com/photo-1584908917822-6799d69a72cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
                   <h1>Nowy lakier? Odświeżona tapicerka?</h1>
                   <p>i inne usługi! Odpicuj swoje auto!</p>
-                  <p><a class="btn btn-lg btn-primary" href="#">Sprawdź dostępne usługi!</a></p>
+                  <p><a class="btn btn-lg btn-primary" href="{% url 'allads' %}">Sprawdź dostępne usługi!</a></p>
                 </div>
               </div>
             </div>
@@ -129,7 +133,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" <img src="https://images.unsplash.com/photo-1508171997656-fdf7cf6c4df9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmludGFnZSUyMGNhcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">NAZWA OGLOSZENIA</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -145,7 +149,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" <img src="https://www.lgt.com/export/shared/.content/publikationen/$news_images/20_093_image_1.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">NAZWA OGLOSZENIA</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -161,56 +165,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">NAZWA OGLOSZENIA</p>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">ZOBACZ OGŁOSZENIE</button>
-
-                    </div>
-                    <small class="text-muted">{cena} PLN</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">NAZWA OGLOSZENIA</p>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">ZOBACZ OGŁOSZENIE</button>
-
-                    </div>
-                    <small class="text-muted">{cena} PLN</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">NAZWA OGLOSZENIA</p>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">ZOBACZ OGŁOSZENIE</button>
-
-                    </div>
-                    <small class="text-muted">{cena} PLN</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" <img src="https://i.hurimg.com/i/hdn/75/0x0/5d8cb3a2d3806c1978b07e65.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">NAZWA OGLOSZENIA</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -227,7 +182,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKaNAAWEBdqt7n8JCWwGeP1Z-YCjFcvQyFfg&usqp=CAU" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">NAZWA OGLOSZENIA</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -243,7 +198,7 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" <img src="https://media.istockphoto.com/photos/lifes-better-in-a-classic-picture-id576715252" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">NAZWA OGLOSZENIA</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -259,7 +214,56 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" <img src="https://tapety.tja.pl/obrazki/tja_normalne/97425.jpg" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" <img src="https://images.unsplash.com/photo-1503650923300-dd2f6a007eaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">NAZWA OGLOSZENIA</p>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ZOBACZ OGŁOSZENIE</button>
+
+                    </div>
+                    <small class="text-muted">{cena} PLN</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" <img src="https://images.unsplash.com/photo-1587750059638-e7e8c43b99fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">NAZWA OGLOSZENIA</p>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ZOBACZ OGŁOSZENIE</button>
+
+                    </div>
+                    <small class="text-muted">{cena} PLN</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" <img src="https://images.unsplash.com/photo-1526284059721-5519814a2274?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">NAZWA OGLOSZENIA</p>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">ZOBACZ OGŁOSZENIE</button>
+
+                    </div>
+                    <small class="text-muted">{cena} PLN</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" <img src="https://images.unsplash.com/photo-1531420853064-43de9aa4366b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80" alt="" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
                   <p class="card-text">NAZWA OGLOSZENIA</p>
                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -299,23 +303,17 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">KONTAKT</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">POMOC</a>
-              <li class="nav-item">
-        <a class="nav-link" href="#">LOGOWANIE</a>
+
+        <a class="nav-link" href="{% url 'login' %}">LOGOWANIE</a>
             <li class="nav-item">
-        <a class="nav-link" href="#">REJESTRACJA</a>
+        <a class="nav-link" href="{% url 'register' %}">REJESTRACJA</a>
       </li>
     </ul>
   </div>
 
 
 </nav><br>
-          <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-          <p class="float-end"><a href="#">Back to top</a></p>
+
         </footer>
       </main>
     <!-- Optional JavaScript; choose one of the two! -->
