@@ -23,7 +23,8 @@ urlpatterns = [
     path('logout/', vl.LogoutUser, name="logout"),
     path('car-add/', vCA.car_add, name="car-add"),
     path('caradvert/<int:id>/', vCA.advert, name="caradvert"),
-    path('parts-add/', vPA.part_advert, name="part-add"),
-    path('partadvert/<str:user>/', vPA.part_advert, name="partadvert"),
+    path('parts-add/', vPA.part_add, name="part-add"),
+    path('partadvert/<int:id>/', vPA.part_advert, name="partadvert"),
+    path('list/', vCA.show_all_ad, name="showallad")
 
 ]

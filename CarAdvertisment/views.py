@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_list_or_404
 from CarAdvertisment.models import CarAdveritsment
 from CarAdvertisment.forms import CarAdvert
 from django.shortcuts import get_object_or_404
@@ -30,3 +30,12 @@ def car_add(request):
                   }
                   )
 
+def show_all_ad(request):
+    allad = get_list_or_404(CarAdveritsment)
+    return render(request,
+                  'list.html',
+                  context={
+                      'allad':allad
+                  }
+
+                  )
