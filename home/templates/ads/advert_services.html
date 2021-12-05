@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Classic Garage - ogłoszenie usługi</title>
+  </head>
+  <body>
+    <header>
+    <style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">SPRZEDAJ!</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">KUP!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CZĘŚCI DO SAMOCHODÓW</a>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">USŁUGI</a>
+      </li>
+      </li>
+    </ul>
+  </div>
+  <span> <a class="hello-msg"href="{% url 'register' %}">Stwórz konto</a> </span>
+  <span><a class="hello-msg" href="{% url 'login' %}">Zaloguj</a> </span>
+  <span class="hello-msg">Cześć, {{request.user}}</span>
+  <span ><a  class="hello-msg" href="{% url 'logout' %}">Wyloguj</a></span>
+
+</nav>
+      </header>
+
+      <main>
+
+        <div class="container py-4 my-4 mx-auto d-flex flex-column">
+    <div class="header">
+        <div class="row r1">
+            <div class="col-md-9 abc">
+                <h1>NAZWA OGŁOSZENIA</h1>
+            </div>
+
+          
+            <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="text-right para"><strong>Oferowane usługi</strong></p>
+        </div>
+    </div>
+    <div class="container-body mt-4">
+        <div class="row r3">
+            <div class="col-md-5 p-0 klo">
+                <ul>
+                    <li>Lokalizacja</li>
+                    <li>Dodano</li>
+                    <li>Ogłoszenie ważne do</li>
+                    <li>Telefon</li>
+                    <li><strong>OPIS</strong></li>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+                </ul>
+            </div>
+            <div class="col-md-7"> <img src="https://thumbs.img-sprzedajemy.pl/1000x901c/ff/4b/0d/zabytkowe-samochody-do-slubu-lodzkie-lodz-398103242.jpg" width="90%" height="95%"> </div>
+        </div>
+    </div>
+          <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+
+            <strong>CENA {{price}} PLN</strong>
+          </a>
+        </div>
+          </div>
+    <div class="footer d-flex flex-column mt-5">
+        <div class="row r4">
+<button input type="buynow" class="btn btn-lg btn-primary   value="BuyNow">KUP TERAZ!</button>
+        </div>
+    </div>
+</div>
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">KONTAKT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">POMOC</a>
+              <li class="nav-item">
+        <a class="nav-link" href="#">LOGOWANIE</a>
+            <li class="nav-item">
+        <a class="nav-link" href="#">REJESTRACJA</a>
+      </li>
+    </ul>
+  </div>
+
+
+</nav><br>
+          <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          <p class="float-end"><a href="#">Back to top</a></p>
+        </footer>
+      </main>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
