@@ -1,12 +1,9 @@
 from django import forms
-from models import car
 
-class carmodel(forms.ModelForm):
-    # title = forms.CharField()
+from CarAdvertisment.models import car_adveritsment
+
+
+class CarAdvert(forms.ModelForm):
     class Meta:
-        model = car
-        fields = [
-            'brand',
-            'model',
-        ]
-
+        model = car_adveritsment
+        fields = '__all__'

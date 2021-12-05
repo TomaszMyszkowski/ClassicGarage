@@ -1,24 +1,34 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import car
+from CarAdvertisment.models import car_adveritsment
+from CarAdvertisment.forms import CarAdvert
 # Create your views here.
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
 
 
-def show_car(request):
-    auto = car.objects.all()
-    return render (request,
-                   'car.html',
-                   {'auto':auto})
+
+def advert(request, user):
+    ad = get_object_or_404(car_adveritsment, user=user)
+
+    return render(request,
+                  'advertview.html',
+                  context={
+                      'ad': ad
+                  }
+                  )
 
 
 def car_add(request):
-    if request.method == "POST":
-        if request.POST.get('brand') and request.POST.get('model'):
-            auto = car()
-            auto.brand = request.POST.get('brand')
-            auto.model = request.POST.get('model')
-            auto.save()
-            return render(
-            request,
-            'car.html',
-    )
+
+    form = CarAdvert(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('advert')
+    return render(request,
+                  'car-add.html',
+                  context={
+                      'form': form
+                  }
+                  )
 
