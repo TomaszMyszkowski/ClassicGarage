@@ -58,25 +58,25 @@
     <div class="header">
         <div class="row r1">
             <div class="col-md-9 abc">
-                <h1>NAZWA OGŁOSZENIA</h1>
+                <h1>{{ad.title}}</h1>
             </div>
 
 
             <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-          <p class="text-right para"><strong>MARKA</strong></p>
-          <br><p class="text-right para"><strong>MODEL</strong></p>
+          <p class="text-right para"><strong>{{ ad.brand }}</strong></p>
+          <br><p class="text-right para"><strong>{{ ad.model }}</strong></p>
         </div>
     </div>
     <div class="container-body mt-4">
         <div class="row r3">
             <div class="col-md-5 p-0 klo">
                 <ul>
-                    <li>{{ ad.year }}</li>
-                    <li>{{ ad.location }}</li>
-                    <li>Dodano</li>
-                    <li>Ogłoszenie ważne do</li>
+                    <li>Rocznik: {{ ad.year }}</li>
+                    <li>Lokalizacja: {{ ad.location }}</li>
+                    <li>Kontakt: {{ad.telephone}}</li>
+
                     <li><strong>OPIS</strong></li>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    {{ ad.description }}
 
                 </ul>
             </div>
@@ -87,7 +87,7 @@
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
 
-            <strong>CENA {{ form.price }} PLN</strong>
+            <strong>CENA {{ ad.price }} PLN</strong>
           </a>
         </div>
           </div>
