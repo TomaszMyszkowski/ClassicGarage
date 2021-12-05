@@ -8,6 +8,7 @@ from home import views as vh
 from login import views as vl
 from CarAdvertisment import views as vCA
 from PartsAdvertisment import views as vPA
+from CarService import views as vCS
 admin.site.register(car)
 admin.site.register(CarAdveritsment)
 admin.site.register(PartOfCarAdvertisment)
@@ -25,5 +26,5 @@ urlpatterns = [
     path('caradvert/<int:id>/', vCA.advert, name="caradvert"),
     path('parts-add/', vPA.part_advert, name="part-add"),
     path('partadvert/<str:user>/', vPA.part_advert, name="partadvert"),
-
+    path('service-add/', vCA.service_add, name="service-add"),
 ]
