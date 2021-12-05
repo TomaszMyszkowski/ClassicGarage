@@ -1,5 +1,5 @@
 
-from CarAdvertisment.models import car, car_adveritsment, part_of_car_advertisment, service_advertisment
+from CarAdvertisment.models import car, CarAdveritsment, PartOfCarAdvertisment, ServiceAdvertisment
 from django.contrib import admin
 from django.urls import path
 
@@ -7,11 +7,11 @@ from register import views as vr
 from home import views as vh
 from login import views as vl
 from CarAdvertisment import views as vCA
-
+from PartsAdvertisment import views as vPA
 admin.site.register(car)
-admin.site.register(car_adveritsment)
-admin.site.register(part_of_car_advertisment)
-admin.site.register(service_advertisment)
+admin.site.register(CarAdveritsment)
+admin.site.register(PartOfCarAdvertisment)
+admin.site.register(ServiceAdvertisment)
 
 
 
@@ -22,6 +22,8 @@ urlpatterns = [
     path('login/', vl.loginPage, name="login"),
     path('logout/', vl.LogoutUser, name="logout"),
     path('car-add/', vCA.car_add, name="car-add"),
-    path('advert/<str:user>/', vCA.advert, name="advert")
+    path('caradvert/<int:id>/', vCA.advert, name="caradvert"),
+    path('parts-add/', vPA.part_advert, name="part-add"),
+    path('partadvert/<str:user>/', vPA.part_advert, name="partadvert"),
 
 ]

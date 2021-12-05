@@ -35,7 +35,7 @@ class car(models.Model):
         return f'{self.brand} {self.model}'
 
 
-class car_adveritsment(models.Model):
+class CarAdveritsment(models.Model):
 
     # id = models.IntegerField(primary_key=True)
     # id_car = models.ForeignKey('car', on_delete=models.CASCADE)
@@ -55,10 +55,10 @@ class car_adveritsment(models.Model):
 
 
 
-class part_of_car_advertisment(models.Model):
+class PartOfCarAdvertisment(models.Model):
 
     # id = models.IntegerField(primary_key=True)
-    id_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     name = models.CharField(max_length=50)
     add_date = models.DateField()
@@ -70,7 +70,7 @@ class part_of_car_advertisment(models.Model):
     telephone = models.IntegerField()
     description = models.TextField(max_length=1000)
 
-class service_advertisment(models.Model):
+class ServiceAdvertisment(models.Model):
 
     service = [
         ('spraying', 'lakierowanie'),
@@ -79,7 +79,7 @@ class service_advertisment(models.Model):
     ]
 
     # id = models.IntegerField(primary_key=True)
-    id_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     service = models.CharField(choices=service, max_length=12)
     add_date = models.DateField()
