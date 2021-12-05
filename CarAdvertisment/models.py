@@ -38,10 +38,10 @@ class car(models.Model):
 class car_adveritsment(models.Model):
 
     # id = models.IntegerField(primary_key=True)
-    id_car = models.ForeignKey('car', on_delete=models.CASCADE)
+    # id_car = models.ForeignKey('car', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    brand = models.CharField(max_length=15)
-    model = models.CharField(max_length=15)
+    brand = models.CharField(max_length=30)
+    model = models.CharField(max_length=30)
     year = models.IntegerField()  #metoda field.unique_for_year
     add_date = models.DateField()
     modified_date = models.DateField()
