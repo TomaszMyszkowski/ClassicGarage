@@ -74,71 +74,32 @@
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Dodaj szczegóły ogłoszenia</h4>
           <div class="mb-3">
-              <label for="title">TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
+              <label>TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
               {{ form.title }}
-              <div class="invalid-feedback">
-                podaj tytuł
               </div>
 
     <div class="mb-3">
               <label >CENA (PLN)<span class="text-muted"></span></label>
               {{ form.price }}
-              <div class="invalid-feedback">
-                Podaj cene
               </div>
             </div>
             <div class="mb-3">
-
             <div class="row">
               <div class="col-md-5 mb-3">
-                <label for="location">WOJEWÓDZTWO</label>
-                <select class="location" name="location" id="location" required>
-                  <option value="">Wybierz...</option>
-                  <option> kujawsko_pomorskie </option>
-                    <option> dolnośląskie </option>
-                    <option> lubelskie </option>
-                    <option> lubuskie </option>
-                    <option> łódzkie </option>
-                    <option> małopolskie </option>
-                    <option> mazowieckie </option>
-                    <option> opolskie </option>
-                    <option> podkarpackie </option>
-                    <option> podlaskie </option>
-                    <option> pomorskie </option>
-                    <option> sląskie </option>
-                    <option>świetokrzyskie</option>
-  <option>wielkopolskie</option>
-<option>zachodniopomorskie</option>
-                </select>
-                <div class="invalid-feedback">
-                  Wybierz województwo...
+                <label >WOJEWÓDZTWO</label>
+                  {{ form.location }}
+
+
                 </div>
               </div>
-<div class="mb-3">
-              <label for="year">START OGŁOSZENIA: <span class="text-muted"></span></label>
-                             <form action="index.php" method="post" >
-	<input type="date" name="add_date" >
-</form>
-              </div>
-            </div>
-<div class="mb-3">
-              <label for="year">OGŁOSZENIE WAŻNE DO:<span class="text-muted"></span></label>
-                             <form action="index.php" method="post" >
-	<input type="date" name="end_date" >
-</form>
-              </div>
-            </div>
 
 
-<div class="form-group">
-    <label for="SentPhoto">WGRAJ ZDJĘCIA</label>
-    <input type="file" class="form-control-file" id="przykladoweWysylaniePliku">
-  </div>
+
     <div class="form-group row">
-   <label for="email">Dodaj krótki opis <span class="text-muted"></span></label>
-              <input type="email" class="form-control" id="email" placeholder="Wpisz dodatkowe informacje dotyczące samochodu/części">
-              <div class="invalid-feedback">
-                Wpisz dodatkowe informacje dotyczące samochodu/części
+   <label>Dodaj krótki opis <span class="text-muted"></span></label>
+             {{ form.description }}
+
+
               </div>
             </div>
 
@@ -146,10 +107,8 @@
 
             <div class="row">
               <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Numer telefonu +48</label>
-                <input class="form-control" id="telephone" name="telephone" placeholder="" required type="integer">
-                <div class="invalid-feedback">
-                  wymagane
+                <label>Numer telefonu +48</label>
+               {{ form. telephone }}
                 </div>
               </div>
 
@@ -197,7 +156,7 @@
 
 
 </nav><br>
-          <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+
           <p class="float-end"><a href="#">Back to top</a></p>
         </footer>
       </main>
