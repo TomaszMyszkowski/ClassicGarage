@@ -3,27 +3,27 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 status = [
-    ('enabled', 'aktywny'),
-    ('disabled', 'nieaktywny')
+    ('aktywne', 'aktywne'),
+    ('nieaktywne', 'nieaktywne')
 ]
 
 change_location = [
-    ('ds', 'dolnośląskie'),
-    ('kp', 'kujawsko_pomorskie'),
-    ('lbl', 'lubelskie'),
-    ('lub', 'lubuskie'),
-    ('łód', 'łódzkie'),
-    ('mlp', 'małopolskie'),
-    ('maz', 'mazowieckie'),
-    ('o', 'opolskie'),
-    ('pkrp', 'podkarpackie'),
-    ('pdls', 'podlaskie'),
-    ('pom', 'pomorskie'),
-    ('sl', 'slaśkie'),
-    ('sw', 'świetokrzyskie'),
-    ('wm', 'warmińsko_mazurskie'),
-    ('wlkp', 'wielkopolskie'),
-    ('zp', 'zachodniopomorskie')
+    ('dolnośląskie', 'dolnośląskie'),
+    ('kujawsko_pomorskie', 'kujawsko_pomorskie'),
+    ('lubelskie', 'lubelskie'),
+    ('lubelskie', 'lubelskie'),
+    ('łódzkie', 'łódzkie'),
+    ('małopolskie', 'małopolskie'),
+    ('mazowieckie', 'mazowieckie'),
+    ('opolskie', 'opolskie'),
+    ('podkarpackie', 'podkarpackie'),
+    ('podlaskie', 'podlaskie'),
+    ('pomorskie', 'pomorskie'),
+    ('śląskie', 'śląskie'),
+    ('świetokrzyskie', 'świetokrzyskie'),
+    ('warmińsko_mazurskie', 'warmińsko_mazurskie'),
+    ('wielkopolskie', 'wielkopolskie'),
+    ('zachodniopomorskie', 'zachodniopomorskie')
 ]
 # Create your models here.
 
@@ -44,12 +44,12 @@ class CarAdveritsment(models.Model):
     brand = models.CharField(max_length=30)
     model = models.CharField(max_length=30)
     year = models.IntegerField()  #metoda field.unique_for_year
-    add_date = models.DateField()
-    modified_date = models.DateField()
-    end_date = models.DateField()
+    # add_date = models.DateField()
+    # modified_date = models.DateField()
+    # end_date = models.DateField()
     price = models.IntegerField()
-    status = models.CharField(choices=status, max_length=8)
-    location = models.CharField(choices=change_location, max_length=4)
+    status = models.CharField(choices=status, max_length=10)
+    location = models.CharField(choices=change_location, max_length=19)
     telephone = models.IntegerField()
     description = models.TextField(max_length=1000)
 
@@ -61,31 +61,31 @@ class PartOfCarAdvertisment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     name = models.CharField(max_length=50)
-    add_date = models.DateField()
-    modified_date = models.DateField()
-    end_date = models.DateField()
+    # add_date = models.DateField()
+    # modified_date = models.DateField()
+    # end_date = models.DateField()
     price = models.IntegerField()
-    status = models.CharField(choices=status, max_length=8)
-    location = models.CharField(choices=change_location, max_length=4)
+    status = models.CharField(choices=status, max_length=10)
+    location = models.CharField(choices=change_location, max_length=19)
     telephone = models.IntegerField()
     description = models.TextField(max_length=1000)
 
 class ServiceAdvertisment(models.Model):
 
     service = [
-        ('spraying', 'lakierowanie'),
-        ('tinywork', 'blacharstwo'),
-        ('car_mechanic', 'mechanika')
+        ('lakierowanie', 'lakierowanie'),
+        ('blacharstwo', 'blacharstwo'),
+        ('mechanika', 'mechanika')
     ]
 
     # id = models.IntegerField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     service = models.CharField(choices=service, max_length=12)
-    add_date = models.DateField()
-    modified_date = models.DateField()
-    end_date = models.DateField()
-    status = models.CharField(choices=status, max_length=8)
-    location = models.CharField(choices=change_location, max_length=4)
+    # add_date = models.DateField()
+    # modified_date = models.DateField()
+    # end_date = models.DateField()
+    status = models.CharField(choices=status, max_length=10)
+    location = models.CharField(choices=change_location, max_length=19)
     telephone = models.IntegerField()
     description = models.TextField(max_length=1000)
