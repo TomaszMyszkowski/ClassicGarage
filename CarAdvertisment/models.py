@@ -3,27 +3,27 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 status = [
-    ('enabled', 'aktywny'),
-    ('disabled', 'nieaktywny')
+    ('aktywne', 'aktywne'),
+    ('nieaktywne', 'nieaktywne')
 ]
 
 change_location = [
-    ('ds', 'dolnośląskie'),
-    ('kp', 'kujawsko_pomorskie'),
-    ('lbl', 'lubelskie'),
-    ('lub', 'lubuskie'),
-    ('łód', 'łódzkie'),
-    ('mlp', 'małopolskie'),
-    ('maz', 'mazowieckie'),
-    ('o', 'opolskie'),
-    ('pkrp', 'podkarpackie'),
-    ('pdls', 'podlaskie'),
-    ('pom', 'pomorskie'),
-    ('sl', 'slaśkie'),
-    ('sw', 'świetokrzyskie'),
-    ('wm', 'warmińsko_mazurskie'),
-    ('wlkp', 'wielkopolskie'),
-    ('zp', 'zachodniopomorskie')
+    ('dolnośląskie', 'dolnośląskie'),
+    ('kujawsko_pomorskie', 'kujawsko_pomorskie'),
+    ('lubelskie', 'lubelskie'),
+    ('lubelskie', 'lubelskie'),
+    ('łódzkie', 'łódzkie'),
+    ('małopolskie', 'małopolskie'),
+    ('mazowieckie', 'mazowieckie'),
+    ('opolskie', 'opolskie'),
+    ('podkarpackie', 'podkarpackie'),
+    ('podlaskie', 'podlaskie'),
+    ('pomorskie', 'pomorskie'),
+    ('śląskie', 'śląskie'),
+    ('świetokrzyskie', 'świetokrzyskie'),
+    ('warmińsko_mazurskie', 'warmińsko_mazurskie'),
+    ('wielkopolskie', 'wielkopolskie'),
+    ('zachodniopomorskie', 'zachodniopomorskie')
 ]
 # Create your models here.
 
@@ -73,9 +73,9 @@ class PartOfCarAdvertisment(models.Model):
 class ServiceAdvertisment(models.Model):
 
     service = [
-        ('spraying', 'lakierowanie'),
-        ('tinywork', 'blacharstwo'),
-        ('car_mechanic', 'mechanika')
+        ('lakierowanie', 'lakierowanie'),
+        ('blacharstwo', 'blacharstwo'),
+        ('mechanika', 'mechanika')
     ]
 
     # id = models.IntegerField(primary_key=True)
