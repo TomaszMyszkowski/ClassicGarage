@@ -26,7 +26,7 @@ urlpatterns = [
     path('caradvert/<int:id>/', vCA.advert, name="caradvert"),
     path('parts-add/', vPA.part_add, name="part-add"),
     path('partadvert/<int:id>/', vPA.part_advert, name="partadvert"),
-    path('list/', vCA.show_all_ad, name="showallad"),
+
     path('service-add/', vCS.service_add, name="service-add"),
     path('serviceadvert/<int:id>/', vCS.servadd, name="serviceadvert"),
 ]
