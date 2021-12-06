@@ -19,7 +19,7 @@ def service_add(request):
     if form.is_valid():
         form.save()
         advert_id = ServiceAdvertisment.objects.order_by("id").last().id
-        return redirect('servadd', id=advert_id)
+        return redirect('serviceadvert', id=advert_id)
     return render(request,
                   'service-add.html',
                   context={
