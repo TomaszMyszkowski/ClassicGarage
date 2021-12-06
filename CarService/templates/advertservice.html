@@ -58,39 +58,32 @@
     <div class="header">
         <div class="row r1">
             <div class="col-md-9 abc">
-                <h1>{{ad.title}}</h1>
+                <h1>{{sc.title}}</h1>
             </div>
 
 
             <div class="col-md-3 text-right pqr"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-          <p class="text-right para"><strong>{{ ad.brand }}</strong></p>
-          <br><p class="text-right para"><strong>{{ ad.model }}</strong></p>
+
+          <br><p class="text-right para"><strong>{{ sc.service}}</strong></p>
         </div>
     </div>
     <div class="container-body mt-4">
         <div class="row r3">
             <div class="col-md-5 p-0 klo">
                 <ul>
-                    <li>Rocznik: {{ ad.year }}</li>
-                    <li>Lokalizacja: {{ ad.location }}</li>
-                    <li>Kontakt: {{ad.telephone}}</li>
+                    <li>Status: {{ sc.status}}</li>
+                    <li>Lokalizacja: {{ sc.location }}</li>
+                    <li>Kontakt: {{sc.telephone}}</li>
 
                     <li><strong>OPIS</strong></li>
-                    {{ ad.description }}
+                    {{ sc.description }}
 
                 </ul>
             </div>
             <div class="col-md-7"> <img src="https://thumbs.img-sprzedajemy.pl/1000x901c/ff/4b/0d/zabytkowe-samochody-do-slubu-lodzkie-lodz-398103242.jpg" width="90%" height="95%"> </div>
         </div>
     </div>
-          <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
 
-            <strong>CENA {{ ad.price }} PLN</strong>
-          </a>
-        </div>
-          </div>
     <div class="footer d-flex flex-column mt-5">
         <div class="row r4">
         <button input type="buynow" class="btn btn-lg btn-primary"  value="BuyNow"> Skorzystaj z usługi!</button>

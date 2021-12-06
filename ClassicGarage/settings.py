@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'home',
     'login',
     'CarAdvertisment',
-    'PartsAdvertisment'
+    'PartsAdvertisment',
+    'CarService'
 
 ]
 
