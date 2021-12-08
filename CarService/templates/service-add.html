@@ -76,27 +76,30 @@
           <h4 class="mb-3">Dodaj szczegóły ogłoszenia</h4>
 
 <div class="mb-3">
-              <label for="title">TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
+              <label>TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
     {{ form.title }}
               </div>
 
                 <div class="row">
               <div class="col-md-5 mb-3">
-                <label for="service">RODZAJ USŁUGI</label>
+                <label>RODZAJ USŁUGI</label>
               {{form.service}}
-                <div class="invalid-feedback">
-                  Wybierz województwo...
+
                 </div>
               </div>
+ <div class="row">
+              <div class="col-md-5 mb-3">
+                <label>STATUS:</label>
+                {{ form.status }}
 
+                </div>
             <div class="mb-3">
 
             <div class="row">
               <div class="col-md-5 mb-3">
-                <label for="location">WOJEWÓDZTWO</label>
+                <label>WOJEWÓDZTWO</label>
                 {{ form.location }}
-                <div class="invalid-feedback">
-                  Wybierz województwo...
+
                 </div>
               </div>
 
@@ -112,7 +115,7 @@
 
             <div class="row">
               <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Numer telefonu +48</label>
+                <label>Numer telefonu +48</label>
                 {{ form.telephone }}
                 </div>
               </div>
@@ -147,9 +150,9 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
 
-        <a class="nav-link" href="#">LOGOWANIE</a>
+        <a class="nav-link" href="{% url 'login' %}">LOGOWANIE</a>
             <li class="nav-item">
-        <a class="nav-link" href="#">REJESTRACJA</a>
+        <a class="nav-link" href="{% url 'register' %}">REJESTRACJA</a>
       </li>
     </ul>
   </div>
