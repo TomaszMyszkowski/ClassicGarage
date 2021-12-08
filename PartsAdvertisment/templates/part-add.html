@@ -26,20 +26,21 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+  <ul class="navbar-nav">
 
-      <li class="nav-item active">
-        <a class="nav-link" href="#">SPRZEDAJ!</a>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'home' %}"><strong>CLASSIC GARAGE</strong></a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">KUP!</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CZĘŚCI DO SAMOCHODÓW</a>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">USŁUGI</a>
+        <a class="nav-link" href="{% url 'car-add' %}">Sprzedaj samochód</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'part-add' %}">Sprzedaj części do samochodów</a>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'service-add' %}">Zoferuj Usługi</a>
       </li>
       </li>
     </ul>
@@ -53,17 +54,24 @@
       </header>
 
       <main>
+
+
               <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
 
             <strong>DODAJ NOWE OGŁOSZENIE - USŁUGI</strong><br><br>
           </a>
+
                 <div class="navbar navbar-dark bg-dark box-shadow">
+
       </div>
+
         </div>
       </div>
           <!-- START THE ad -->
+
+
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Dodaj szczegóły ogłoszenia</h4>
           <div class="mb-3">
@@ -72,37 +80,42 @@
               </div>
 
     <div class="mb-3">
-              <label >CENA (PLN)<span class="text-muted"></span></label>
-              {{ form.price }}
+              <label for="price">CENA (PLN)<span class="text-muted"></span></label>
+                {{ form.price }}
               </div>
             </div>
+           <div class="mb-3">
+              <label>STATUS:<span class="text-muted"></span></label>
+             {{ form.status }}
+
+              </div>
             <div class="mb-3">
+
             <div class="row">
               <div class="col-md-5 mb-3">
-                <label >WOJEWÓDZTWO</label>
-                  {{ form.location }}
-
+                <label for="location">WOJEWÓDZTWO</label>
+               {{form.location}}
 
                 </div>
               </div>
+<div class="mb-3">
+
+              </div>
+            </div>
 
 
 
     <div class="form-group row">
    <label>Dodaj krótki opis <span class="text-muted"></span></label>
-             {{ form.description }}
-
-
-              </div>
+            {{ form.description }}
             </div>
 
             <h4 class="mb-3">Dane Kontaktowe</h4>
 
             <div class="row">
               <div class="col-md-3 mb-3">
-                <label>Numer telefonu +48</label>
-               {{ form.telephone }}
-                </div>
+                <label for="cc-expiration">Numer telefonu +48</label>
+              {{ form.telephone}}
               </div>
 
             </div>
@@ -135,11 +148,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">KONTAKT</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">POMOC</a>
-              <li class="nav-item">
+
         <a class="nav-link" href="#">LOGOWANIE</a>
             <li class="nav-item">
         <a class="nav-link" href="#">REJESTRACJA</a>
@@ -149,7 +158,7 @@
 
 
 </nav><br>
-
+          <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
           <p class="float-end"><a href="#">Back to top</a></p>
         </footer>
       </main>

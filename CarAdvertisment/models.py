@@ -60,7 +60,7 @@ class PartOfCarAdvertisment(models.Model):
     # id = models.IntegerField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    name = models.CharField(max_length=50)
+    # name = models.CharField(max_length=50)
     # add_date = models.DateField()
     # modified_date = models.DateField()
     # end_date = models.DateField()
