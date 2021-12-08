@@ -72,10 +72,11 @@
       </div>
           <!-- START THE ad -->
 
-
+ <form method="POST" class="post-form">
+ {% csrf_token %}
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Dodaj szczegóły ogłoszenia - SAMOCHÓD</h4>
-{% csrf_token %}
+
 <div class="mb-3">
               <label>TYTUŁ OGŁOSZENIA:<span class="text-muted"></span></label>
               {{ form.title }}
@@ -141,9 +142,9 @@
 
             </div>
  <hr class="mb-4">
-  <form method="POST" class="post-form">
-            <button class="save btn btn-primary btn-lg btn-block" type="submit">DODAJ SWOJE OGŁOSZENIE!</button>
-          </form>
+
+            <input class="save btn btn-primary btn-lg btn-block" type="submit" value="DODAJ SWOJE OGŁOSZENIE!">
+
         </div>
       </div>
 
@@ -151,7 +152,7 @@
     </div>
   </fieldset>
 
-
+</form>
 
           <!-- /END THE ad -->
 
