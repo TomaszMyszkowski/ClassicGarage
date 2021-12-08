@@ -26,22 +26,23 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav2">
-    <ul class="navbar-nav">
-
-      <li class="nav-item active">
-        <a class="nav-link" href="#">SPRZEDAJ!</a>
-      </li>
+   <ul class="navbar-nav">
 
       <li class="nav-item">
-        <a class="nav-link" href="#">KUP!</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CZĘŚCI DO SAMOCHODÓW</a>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">USŁUGI</a>
+        <a class="nav-link" href="{% url 'home' %}"><strong>CLASSIC GARAGE</strong></a>
       </li>
 
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'car-add' %}">Sprzedaj samochód</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'part-add' %}">Sprzedaj części do samochodów</a>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'service-add' %}">Zoferuj Usługi</a>
+      </li>
+      </li>
     </ul>
   </div>
   <span> <a class="hello-msg" href="{% url 'register' %}">Stwórz konto</a> </span>
