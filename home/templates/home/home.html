@@ -46,7 +46,9 @@
     </ul>
   </div>
   <span> <a class="hello-msg"href="{% url 'register' %}">Stwórz konto</a> </span>
+  {% if not user.is_authenticated %}
   <span><a class="hello-msg" href="{% url 'login' %}">Zaloguj</a> </span>
+  {% endif %}
   <span class="hello-msg">Cześć, {{request.user}}</span>
   <span ><a  class="hello-msg" href="{% url 'logout' %}">Wyloguj</a></span>
 
