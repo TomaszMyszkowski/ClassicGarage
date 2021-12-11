@@ -7,11 +7,11 @@ from django.shortcuts import get_object_or_404
 
 
 def advert(request, id):
-    advert = get_object_or_404(CarAdveritsment, id=id)
+    ad = get_object_or_404(CarAdveritsment, id=id)
     return render(request,
                   'advertview.html',
                   context={
-                      'advert': advert
+                      'ad': ad
                   }
                   )
 
