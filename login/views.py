@@ -23,8 +23,9 @@ def loginPage(request):
         else:
             messages.info(request, 'Username OR password is incorrect')
 
-    context = {}
-    return render(request, 'login/login.html', context)
+    if request.user.is_authenticated:
+        return redirect("home")
+    return render(request, 'login/login.html')
 
 
 def LogoutUser(request):
