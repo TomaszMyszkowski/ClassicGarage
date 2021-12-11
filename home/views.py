@@ -18,7 +18,7 @@ def home(request):
         'count': paginator.count,
         'page': page
     }
-    return render(request, 'home/new_home.html', context)
+    return render(request, 'home/home.html', context)
 
 # def home(request):
 #     return render(
