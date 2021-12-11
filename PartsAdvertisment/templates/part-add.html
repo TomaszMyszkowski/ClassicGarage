@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -72,50 +72,62 @@
         </div>
     </div>
     <!-- START THE ad -->
-          <form method="POST">
-              {% csrf_token %}
-              {{form.user }}
-    <div class="col-md-8 order-md-1">
-        <h4 class="mb-3">Dodaj szczegóły ogłoszenia</h4>
-        <div class="mb-3">
-            <label>TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
-            {{ form.title }}
-        </div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Dodaj szczegóły ogłoszenia</h4>
 
-        <div class="mb-3">
-            <label>CENA (PLN)<span class="text-muted"></span></label>
-            {{ form.price }}
-        </div>
-    </div>
-    <div class="mb-3">
-        <div class="row">
-            <div class="col-md-5 mb-3">
-                <label>WOJEWÓDZTWO</label>
-                {{ form.location }}
+            <div class="mb-3">
+                <label>TYTUŁ OGŁOSZENIA<span class="text-muted"></span></label>
+                {{ form.title }}
             </div>
-        </div>
-        <div class="form-group row">
-            <label>Dodaj krótki opis <span class="text-muted"></span></label>
-            {{ form.description }}
-        </div>
-    </div>
-    <h4 class="mb-3">Dane Kontaktowe</h4>
-    <div class="row">
-        <div class="col-md-3 mb-3">
-            <label>Numer telefonu +48</label>
-            {{ form.telephone }}
-        </div>
-    </div>
-    </div>
-        <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">DODAJ SWOJE OGŁOSZENIE!</button>
-    </form>
-    </div>
-    </div>
 
-      </div>
-    </div>
-    </fieldset>
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label>CENA</label>
+                    {{ form.price }}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label>STATUS:</label>
+                    {{ form.status }}
+
+                </div>
+                <div class="mb-3">
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label>WOJEWÓDZTWO</label>
+                            {{ form.location }}
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label>Dodaj krótki opis <span class="text-muted"></span></label>
+                        {{ form.description }}
+                    </div>
+                </div>
+
+                <h4 class="mb-3">Dane Kontaktowe</h4>
+
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label>Numer telefonu +48</label>
+                        {{ form.telephone }}
+                    </div>
+                </div>
+
+            </div>
+
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">DODAJ SWOJE OGŁOSZENIE!</button>
+    </form>
+
 
 
     <!-- /END THE ad -->
