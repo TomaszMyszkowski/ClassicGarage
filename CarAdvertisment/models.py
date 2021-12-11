@@ -9,7 +9,7 @@ status = [
 
 change_location = [
     ('dolnośląskie', 'dolnośląskie'),
-    ('kujawsko_pomorskie', 'kujawsko_pomorskie'),
+    ('kujawsko-pomorskie', 'kujawsko_pomorskie'),
     ('lubelskie', 'lubelskie'),
     ('lubelskie', 'lubelskie'),
     ('łódzkie', 'łódzkie'),
@@ -21,7 +21,7 @@ change_location = [
     ('pomorskie', 'pomorskie'),
     ('śląskie', 'śląskie'),
     ('świetokrzyskie', 'świetokrzyskie'),
-    ('warmińsko_mazurskie', 'warmińsko_mazurskie'),
+    ('warmińsko-mazurskie', 'warmińsko_mazurskie'),
     ('wielkopolskie', 'wielkopolskie'),
     ('zachodniopomorskie', 'zachodniopomorskie')
 ]
@@ -50,7 +50,7 @@ class CarAdveritsment(models.Model):
     price = models.IntegerField()
     status = models.CharField(choices=status, max_length=10)
     location = models.CharField(choices=change_location, max_length=19)
-    telephone = models.IntegerField()
+    telephone = models.CharField(max_length=15)
     description = models.TextField(max_length=1000)
 
 
@@ -67,7 +67,7 @@ class PartOfCarAdvertisment(models.Model):
     price = models.IntegerField()
     status = models.CharField(choices=status, max_length=10)
     location = models.CharField(choices=change_location, max_length=19)
-    telephone = models.IntegerField()
+    telephone = models.CharField(max_length=15)
     description = models.TextField(max_length=1000)
 
 class ServiceAdvertisment(models.Model):
@@ -87,5 +87,5 @@ class ServiceAdvertisment(models.Model):
     # end_date = models.DateField()
     status = models.CharField(choices=status, max_length=10)
     location = models.CharField(choices=change_location, max_length=19)
-    telephone = models.IntegerField()
+    telephone = models.CharField(max_length=15)
     description = models.TextField(max_length=1000)
