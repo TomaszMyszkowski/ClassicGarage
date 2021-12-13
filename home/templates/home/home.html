@@ -45,13 +45,15 @@
         <a class="nav-link" href="{% url 'part-add' %}">Sprzedaj części do samochodów</a>
 
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'service-add' %}">Zoferuj Usługi</a>
+        <a class="nav-link" href="{% url 'service-add' %}">Zaoferuj Usługi</a>
       </li>
       </li>
     </ul>
   </div>
   <span> <a class="hello-msg"href="{% url 'register' %}">Stwórz konto</a> </span>
-  <span><a class="hello-msg" href="{% url 'login' %}">Zaloguj</a> </span>
+    {% if not user.is_authenticated %}
+        <span><a class="hello-msg" href="{% url 'login' %}">Zaloguj</a> </span>
+    {% endif %}
   <span class="hello-msg">Cześć, {{request.user}}</span>
   <span ><a  class="hello-msg" href="{% url 'logout' %}">Wyloguj</a></span>
 
