@@ -43,13 +43,15 @@
                     <a class="nav-link" href="{% url 'part-add' %}">Sprzedaj części do samochodów</a>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'service-add' %}">Zoferuj Usługi</a>
+                    <a class="nav-link" href="{% url 'service-add' %}">Zaoferuj Usługi</a>
                 </li>
                 </li>
             </ul>
         </div>
         <span> <a class="hello-msg" href="{% url 'register' %}">Stwórz konto</a> </span>
+        {% if not user.is_authenticated %}
         <span><a class="hello-msg" href="{% url 'login' %}">Zaloguj</a> </span>
+        {% endif %}
         <span class="hello-msg">Cześć, {{request.user}}</span>
         <span><a class="hello-msg" href="{% url 'logout' %}">Wyloguj</a></span>
 
@@ -75,7 +77,7 @@
     <!-- START THE ad -->
     <form method="POST">
         {% csrf_token %}
-        <div class="col-md-8 order-md-1">
+        <div class="col-md-8 order-md-1 mb-2">
             <h4 class="mb-3">Dodaj szczegóły ogłoszenia</h4>
 
             <div class="mb-3">
@@ -126,7 +128,7 @@
 
 
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">DODAJ SWOJE OGŁOSZENIE!</button>
+            <button class="btn btn-primary btn-lg btn-block mb-4" type="submit">DODAJ SWOJE OGŁOSZENIE!</button>
     </form>
 
 
